@@ -1,2 +1,12 @@
 #!/bin/bash
-abc=abcdefghijklmnopqrstuvwxyz; i=0; while [ $i -lt 26 ]; do j=0; while [ $j -lt 26 ]; do x=${abc:$i:1}${abc:$j:1}; if [ "$x" != "oo" ]; then echo $x; fi; j=$((j+1)); done; i=$((i+1)); done
+
+for i in {a..z}
+do
+  for j in {a..z}
+  do
+    if [ "$i$j" != "oo" ]
+    then
+      echo "$i$j"
+    fi
+  done
+done
