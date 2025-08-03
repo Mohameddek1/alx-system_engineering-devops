@@ -1,2 +1,2 @@
 #!/bin/bash
-printf 'ibase=5\nobase=8\n%s\n%s+\np\n' "$(echo $WATER | tr water 01234)" "$(echo $STIR | tr stir 0123)" | dc | tr '01234567' 'bestchol'
+printf 'ibase=5\nobase=8\n%s\n%s+\np\n' "$(echo "$WATER" | tr water 01234)" "$(echo "$STIR" | tr stir 0123)" | dc | tr '01234567' 'bestchol'
